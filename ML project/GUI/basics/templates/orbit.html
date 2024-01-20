@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'orbit.css'%}">
+</head>
+
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+<div class="asteroid">Prediction of Orbital path of Asteroid</div>
+
+    <form method="POST" class="formm">
+        {% csrf_token %}
+ 
+    <img src="nasa.jpg" alt="error" width="50%" height="50%">
+        <div class="containeer1">
+            <div>NEO_flag <br>
+
+                <input type="text" placeholder="NEO_flag if raised 1 else 0" name="neo" class="ip1">
+            </div>
+
+            <div> One_km_NEO_flag <br>
+
+                <input type="text" placeholder="One_km_NEO_flag if raised 1 else 0" name="onekm" class="ip1">
+            </div>
+
+            <div>PHA_flag <br>
+                <input type="text" placeholder="PHA_flag if raised 1 else 0" name="pha" class="ip1">
+            </div>
+
+            <div>
+                Absolute magnitude <br>
+                <input type="text" placeholder="Enter H in 5-25 range" name="absolmag" class="ip1">
+            </div>
+
+            <div>Slope parameter <br>
+                <input type="text" placeholder="Enter G 0.15" name="sloppara" class="ip1">
+            </div>
+
+            <div>Number of observation <br>
+                <input type="text" placeholder="Enter Number of obs" name="numbsobs" class="ip1">
+            </div>
+
+            <div>
+                rms residual <br>
+                <input type="text" placeholder="Enter rms " name="rmsresi" class="ip1">
+            </div>
+
+            <div> Uncertanity parameter <br>
+                <input type="text" placeholder="Enter 'U' in 0-10 range" name="uncerpara" class="ip1">
+            </div>
+
+            <div>poch of the Orbit <br>
+                <input type="text" placeholder="Enter Epoch 2459201" name="epoch" class="ip1">
+            </div>
+
+            <div>Mean anomaly <br>
+                <input type="text" placeholder="Enter M in range 1-999" name="meanano" class="ip1">
+            </div>
+
+            <div>Argument of perihelion <br>
+                <input type="text" placeholder="Enter perihelion in range 1-999" name="arguperi" class="ip1">
+            </div>
+
+            <div>Longitude of the ascending node <br>
+                <input type="text" placeholder="Enter node in range 1-999 " name="node" class="ip1">
+            </div>
+
+            <div>Inclination to the ecliptic <br>
+                <input type="text" placeholder="Enter Inclination in range 1-99" name="ecliptic" class="ip1">
+            </div>
+
+            <div>
+                Orbital eccentricity <br>
+                <input type="text" placeholder="Enter eccentricity in 0. range" name="eccentricity" class="ip1">
+            </div>
+
+            <div> Mean daily motion <br>
+                <input type="text" placeholder="Enter Motion in 0.range" name="meanmotion" class="ip1">
+            </div>
+
+            <div> Semimajor axis <br>
+                <input type="text" placeholder="Enter Semimajor axis 1-99" name="axis" class="ip1">
+            </div>
+
+            <div> Number of oppositions <br>
+                <input type="text" placeholder="Enter Oppositions in range 1-99" name="numops" class="ip1">
+            </div>
+
+            <div>Tp <br>
+                <input type="text" placeholder="Enter Tp" name="tp" class="ip1">
+            </div>
+
+            <div>Orbital Period <br>
+                <input type="text" placeholder="Enter Orbital Period" name="orbitalperiod" class="ip1">
+            </div>
+
+            <div>Perihelion distance <br>
+                <input type="text" placeholder="Enter Perihelion distance" name="peridist" class="ip1">
+            </div>
+
+            <div>Aphelion distance <br>
+                <input type="text" placeholder="Enter Aphelion distance" name="aphedist" class="ip1">
+            </div>
+
+            <div >   Semilatus rectum <br>
+                <input type="text" placeholder="Enter Semilatus rectum" name="semirectum" class="ip1">
+            </div>
+
+            <div>Synodic_period <br>
+                <input type="text" placeholder="Enter Synodic period" name="synoperiod" class="ip1">
+            </div>
+
+            <div>
+                <button type="submit" style="background-color: cadetblue;" name="buttonflo" id="containeer3">Submit</button>
+                <div class="ress">
+                    {{result}}
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+
+</html>
