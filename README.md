@@ -1,4 +1,3 @@
-
 # Ml-project
 here i created a machine learning model by using svm algorithm frm scikit learn and pandas which predict the orbital path of asteroid considering some input data about the orbit
 the data file is in csv form
@@ -72,8 +71,6 @@ Semilatus_rectum -----float -----Semilatus rectum distance (AU)
 Orbital_period---- float----- Orbital period (years)
 Synodic_period----- float----- Synodic period (years)
 
+snapshot of predicting the object 
 
-
-
-
-
+![Screenshot 2023-12-10 151155](https://github.com/UmraFathima/Ml-project/assets/154687173/589c0136-2e39-4fb1-a39f-1e352a9a8ab2)
