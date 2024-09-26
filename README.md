@@ -2,7 +2,7 @@
 here i created a machine learning model by using svm algorithm frm scikit learn and pandas which predict the orbital path of asteroid considering some input data about the orbit
 the data file is in csv form
 
-#### Here is the snap shot of ml model which is hosted in django
+### Here is the snap shot of ml model which is hosted in django
 
 ![image](https://github.com/UmraFathima/Ml-project/assets/154687173/775e06a9-3006-417d-add7-b433090e9bfe)
 
