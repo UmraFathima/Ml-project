@@ -1,4 +1,4 @@
-# Ml-project
+# Machine Learning-project
 here i created a machine learning model by using svm algorithm frm scikit learn and pandas which predict the orbital path of asteroid considering some input data about the orbit
 the data file is in csv form
 
